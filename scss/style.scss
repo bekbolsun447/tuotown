@@ -1,0 +1,586 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  text-decoration: none !important;
+}
+
+body {
+  background: #2d2b2b;
+}
+
+p {
+  margin: 0;
+  font-weight: 300 !important;
+}
+
+h1, h5 {
+  font-weight: 300 !important;
+  font-family: 'Jura', sans-serif;
+}
+
+.header_menu {
+  position: fixed;
+  padding: 48px 32px 48px 48px;
+  left: -100%;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 8;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url("../img/menu-bg.png") no-repeat center/cover;
+  transition: 1s;
+
+  .close-menu {
+    color: #FFFFFF;
+    border: none;
+    background: none;
+
+    &:active {
+      transform: scale(1.5);
+    }
+  }
+
+  .header_tab {
+    margin-top: 57px;
+
+    .header_tab-links {
+      display: block;
+      margin-bottom: 24px;
+      font-size: 15px;
+      line-height: 22px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+
+  .menu_content {
+    margin-top: 48px;
+
+    .menu-links {
+      margin-bottom: 16px;
+      display: block;
+      font-size: 12px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      opacity: 0.6;
+    }
+  }
+}
+
+.display-block {
+  left: 0;
+  opacity: 1;
+}
+
+.opacity {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background: black;
+  opacity: .7;
+  display: none;
+}
+
+.show {
+  display: block !important;
+  z-index: 7;
+}
+
+#header {
+  z-index: 5;
+  background: rgba(33, 33, 33, 0.8);
+  backdrop-filter: blur(11px);
+  position: fixed;
+  width: 100%;
+  padding: 18px 0;
+
+  .container {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .header_contact {
+        display: flex;
+        align-items: center;
+
+        button {
+          border: none;
+          background: none;
+        }
+
+        .header-menu-icon {
+          &:active {
+            transform: scale(1.2);
+          }
+        }
+
+        .header_geo {
+          margin-left: 25px;
+          color: white;
+        }
+
+        .header-call {
+          margin-left: 43px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+        }
+      }
+
+      .geo_modal_bg {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility .3s, opacity .5s;
+
+        .geo_modal {
+          background: #FFFFFF;
+          border-radius: 0 25px 25px 25px;
+          width: 0;
+          height: 0;
+          float: left;
+          transition: width 1s, height 1s;
+          position: relative;
+
+          .geo-modal-close {
+            position: absolute;
+            top: 16px;
+            right: 32px;
+            cursor: pointer;
+          }
+
+          .map {
+
+          }
+        }
+      }
+
+      .header-logo {
+        .header-logo-img {
+
+        }
+      }
+
+      .header_inf {
+        display: flex;
+        align-items: center;
+
+        .header-buy {
+          margin-right: 25px;
+          color: #FFFFFF;
+        }
+
+        .header-message {
+          margin-right: 28px;
+          color: #FFFFFF;
+        }
+
+        form {
+          .header-input {
+            float: right;
+            margin-right: 8px;
+            background: none;
+            border: 2px white solid;
+            border-radius: 10px;
+            width: 0;
+            opacity: 0;
+            color: #FFFFFF;
+            padding: 0 5px;
+            transition: width .5s, opacity .5s;
+            font-weight: 300;
+          }
+        }
+
+        .header-search {
+          color: #FFFFFF;
+        }
+      }
+
+      .sms-modal_bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .7);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility .5s, opacity .5s;
+
+        .sms_modal {
+          position: fixed;
+          right: 150px;
+          top: 50px;
+          width: 400px;
+          height: 300px;
+          background: #FFFFFF;
+          border-radius: 20px 0 20px 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          span {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+          }
+
+          form {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            p {
+              text-align: start;
+            }
+
+            input {
+              width: 300px;
+              margin-top: 8px;
+            }
+
+            .sms-email {
+              border-radius: 10px;
+              border: 1px solid black;
+            }
+
+            .sms-text-area {
+              height: 100px;
+              border: 1px solid black;
+              border-radius: 10px;
+            }
+
+            .sms-button {
+              border-radius: 10px;
+              width: 150px;
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.geo_modal-show {
+  width: 55% !important;
+  height: 60vh !important;
+}
+
+.geo_modal_bg-show {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.sms-modal-show {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.show-input1 {
+  width: 300px !important;
+  opacity: 1 !important;
+}
+
+.hero {
+  height: 80vh;
+  z-index: 1;
+
+  .hero-prev-btns {
+    position: relative;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    top: auto;
+    bottom: 50px;
+    width: 50px;
+
+    img:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .carousel-caption {
+    right: auto;
+    bottom: auto;
+    top: 30%;
+    left: 10%;
+    text-align: start;
+    width: 38%;
+
+    h1 {
+      font-size: 41px;
+      line-height: 48px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      margin-top: 24px;
+      font-size: 19px;
+      line-height: 23px;
+      letter-spacing: 1px;
+      width: 90%;
+    }
+  }
+
+  .carousel-indicators {
+    bottom: 30px;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 12px;
+    text-indent: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+  }
+
+  .hero-btn {
+    margin-top: 39px;
+    border: 2px solid #C80000;
+    border-radius: 27px;
+    background: none;
+    width: 150px;
+  }
+
+  .hero_buy {
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    margin-top: 27px;
+    transition: visibility 0s, opacity .5s;
+    opacity: 0;
+
+    .hero_buy-btn {
+      background: #C80000;
+      border: 2px solid #C80000;
+      border-radius: 27px;
+      width: 170px;
+      padding: 10px 0;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .hero_buy_price {
+      margin-left: 48px;
+      font-size: 14px;
+      line-height: 18px;
+      color: #FFFFFF;
+      margin-top: 0;
+
+    }
+  }
+
+  .display-price {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .display-none {
+    display: none;
+  }
+}
+
+.k_tab {
+  margin: 60px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+
+  .tab-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .tab_btn-img {
+      opacity: 0.4;
+    }
+
+    .tab_btn-text {
+      margin-top: 31px;
+      font-size: 17px;
+      line-height: 21px;
+      color: #FFFFFF;
+      opacity: 0.4;
+    }
+  }
+
+}
+
+.collection {
+  margin-top: 64px;
+  color: #FFFFFF;
+
+  .product {
+    margin-top: 24px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/collection-bg.png) no-repeat center/cover;
+    border-radius: 14px;
+    position: relative;
+
+    .product_content {
+      width: 100%;
+      margin-top: 380px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .product_content-about {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 28px;
+      }
+
+      .product_content-link {
+        &:hover {
+          transform: scale(1.5);
+          animation: product_content-link .5s linear infinite;
+        }
+
+        @keyframes product_content-link {
+          0% {
+            transform: translateX(-8px);
+          }
+          100% {
+            transform: translateX(8px);
+          }
+        }
+      }
+    }
+  }
+
+  .knife {
+    margin-top: 24px;
+
+    .knife_bg {
+      height: 420px;
+      background: #272727;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .knife-link_plus {
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        cursor: pointer;
+      }
+
+      .knife-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 29px;
+
+        div {
+          position: absolute;
+          right: 25px;
+        }
+      }
+
+      .knife-link-new {
+        padding: 5px 5px;
+        border-radius: 20px;
+        background: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          margin: 0 8px;
+        }
+
+        .product-bag-icon {
+          display: none;
+          opacity: 0;
+          transition: opacity .5s;
+        }
+      }
+
+      .knife-img {
+        margin-top: 59px;
+        margin-bottom: 82px;
+      }
+    }
+
+    .knife_content {
+      margin-top: 12px;
+
+      .knife-name {
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 1px;
+      }
+
+      .knife_about {
+        display: flex;
+        align-items: center;
+
+        .knife-price {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 28px;
+          opacity: .4;
+        }
+
+        .knife-type {
+          font-size: 14px;
+          line-height: 28px;
+          color: #FF3232;
+          margin-left: 28px;
+        }
+      }
+    }
+  }
+}
+
+.product-plus-translate {
+  animation: translate-icon .2s;
+}
+
+@keyframes translate-icon {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+.product-knife-plus-show {
+  display: block !important;
+  opacity: 1 !important;
+}

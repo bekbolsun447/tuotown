@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TuoTown</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./scss/style.css">
+</head>
+<body>
+
+<div class="opacity " onclick="closeMenu()"></div>
+
+<div class="header_menu">
+    <button class="close-menu" onclick="closeMenu()"><i class="fa-solid fa-angle-left"></i></button>
+    <div class="header_tab">
+        <a href="#" class="header_tab-links">Кухонные ножи TUOTOWN</a>
+        <a href="#" class="header_tab-links">Складные ножи TUOTOWN</a>
+        <a href="#" class="header_tab-links">Кухонные ножи QXF</a>
+        <a href="#" class="header_tab-links">Точильные камни</a>
+        <a href="#" class="header_tab-links">Наборы для BBQ</a>
+        <a href="#" class="header_tab-links"> Кухонные принадлежности</a>
+        <a href="#" class="header_tab-links">Туристические товары</a>
+    </div>
+    <div class="menu_content">
+        <a href="#" class="menu-links">Новости</a>
+        <a href="#" class="menu-links">О компании</a>
+        <a href="#" class="menu-links">Контакты</a>
+        <a href="#" class="menu-links">Как проехать</a>
+    </div>
+
+</div>
+
+<div id="header">
+    <div class="container">
+        <div class="header">
+            <div class="header_contact header_item">
+                <button><img src="./img/header-menu-btn.svg" onclick="menu()" alt="Menu" class="header-menu-icon">
+                </button>
+                <a href="javascript:void (0)" class="header_geo">
+                    <i class=" fa-solid fa-location-dot"></i>
+                </a>
+                <p class="header-call">8 981 120-11-17</p>
+            </div>
+            <div class="geo_modal_bg">
+                <div class="geo_modal">
+                    <span class="geo-modal-close">X</span>
+                </div>
+            </div>
+            <div class="header-logo header_item">
+                <a href="#" class="head-logo"><img src="./img/header-logo.svg" alt="Logo" class="header-logo-img"></a>
+            </div>
+            <div class="header_inf header_item">
+                <a href="javascript:void (0)" class="header-buy"><i class=" fa-solid fa-bag-shopping"></i></a>
+                <a href="javascript:void (0)" class="header-message"><i class=" fa-solid fa-envelope"></i></a>
+                <form action="" class="header-form">
+                    <input type="search" id="header-input" class="header-input">
+                </form>
+                <a href="javascript:void (0)" class="header-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            <div class="sms-modal_bg">
+                <div class="sms_modal">
+                    <span class="sms-modal-close">X</span>
+                    <form action="">
+                        <p>Your email:</p>
+                        <input type="email" class="sms-email">
+                        <p>You message:</p>
+                        <input type="text-area" class="sms-text-area">
+                        <input type="button" value="Submit" class="sms-button">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="hero">
+    <div id="carouselExampleCaptions" class="carousel  slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1">1
+            </button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2">
+                2
+            </button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3">
+                3
+            </button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/hero-img.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption hero_content d-none d-md-block">
+                    <h1 class="hero-title">Исключительное качество без компромиссов</h1>
+                    <p class="hero-about">Ножи «Tuotown» – это главный инструмент поваров и секрет кулинарного мастерства</p>
+                    <button type="button" onclick="priceHero()" class="btn hero-btn hero-btn1 btn-primary">Подробнее
+                    </button>
+                    <div class="hero_buy">
+                        <button type="button" class="btn hero_buy-btn  btn-primary">Купить</button>
+                        <p class="hero_buy_price">48 тыс. р.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/hero-img.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption hero_content d-none d-md-block">
+                    <h1>Исключительное качество без компромиссов</h1>
+                    <p>Ножи «Tuotown» – это главный инструмент поваров и секрет кулинарного мастерства</p>
+                    <button type="button" class="btn hero-btn btn-primary">Подробнее</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/hero-img.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption hero_content d-none d-md-block">
+                    <h1>Исключительное качество без компромиссов</h1>
+                    <p>Ножи «Tuotown» – это главный инструмент поваров и секрет кулинарного мастерства</p>
+                    <button type="button" class="btn hero-btn btn-primary">Подробнее</button>
+                </div>
+            </div>
+        </div>
+        <div class="container hero-prev-btns">
+            <button class="carousel-control-prev hero-next-button" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                <img src="./img/hero-prev.svg" alt="prev">
+            </button>
+            <button class="carousel-control-next hero-next-button" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                <img src="./img/hero-next.svg" alt="next">
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="k_tab">
+        <div class="tab-buttons">
+            <img src="./img/tab_knife.svg" alt="knife" class="tab_btn-img">
+            <p class="tab_btn-text">Кухонные ножи</p>
+        </div>
+        <div class="tab-buttons">
+            <img src="./img/tab-sclad.svg" alt="knife" class="tab_btn-img">
+            <p class="tab_btn-text">Складные ножи</p>
+        </div>
+        <div class="tab-buttons">
+            <img src="./img/tab-tochilki.svg" alt="knife" class="tab_btn-img">
+            <p class="tab_btn-text">Точилки для ножей</p>
+        </div>
+        <div class="tab-buttons">
+            <img src="./img/tab-accesuar.svg" alt="knife" class="tab_btn-img">
+            <p class="tab_btn-text">Аксессуары для кухни</p>
+        </div>
+    </div>
+</section>
+
+<section class="collection">
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12  product">
+                <div class="product_content card-body">
+                    <p class="product_content-about">Познакомьтесь с коллекцией ножей TUOTOWN</p>
+                    <a href="#" class="product_content-link"><img src="./img/product-link.svg" alt="Next"></a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-xl-3 col-md-6 col-sm-6 col-6 knife">
+                <div class="knife_bg ">
+                    <div class="knife-link_plus">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <img src="./img/sq01-b.png" alt="Knife" class="knife-img">
+                </div>
+                <div class="knife_content">
+                    <h5 class="knife-name">Складной нож SQ01-B</h5>
+                    <div class="knife_about">
+                        <p class="knife-price">850 р.</p>
+                        <p class="knife-type">Новинка</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-xl-3 col-md-6 col-sm-6 col-6  knife">
+                <div class="knife_bg ">
+                    <div class="knife-link_plus">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <img src="./img/jj001-b.png" alt="Knife" class="knife-img">
+                </div>
+                <div class="knife_content">
+                    <h5 class="knife-name">Складной нож JJ001-TUO-B</h5>
+                    <div class="knife_about">
+                        <p class="knife-price">12 850 р.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-xl-3 col-md-6 col-sm-6 col-6 knife">
+                <div class="knife_bg ">
+                    <div class="knife-link ">
+                        <div class="knife-link-new">
+                            <i class="fa-solid  fa-plus product-plus"></i>
+                            <i class=" fa-solid fa-bag-shopping product-bag-icon"></i>
+                        </div>
+                    </div>
+                    <img src="./img/sq01-b.png" alt="Knife" class="knife-img">
+                </div>
+                <div class="knife_content">
+                    <h5 class="knife-name">Складной нож SQ01-B</h5>
+                    <div class="knife_about">
+                        <p class="knife-price">850 р.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-xl-3 col-md-6 col-sm-6 col-6  knife">
+                <div class="knife_bg ">
+                    <div class="knife-link ">
+                        <div class="knife-link-new">
+                            <i  class="fa-solid  fa-plus product-plus"></i>
+                            <i class=" fa-solid fa-bag-shopping product-bag-icon"></i>
+                        </div>
+                    </div>
+                    <img src="./img/jj001-b.png" alt="Knife" class="knife-img">
+                </div>
+                <div class="knife_content">
+                    <h5 class="knife-name">Складной нож JJ001-TUO-B</h5>
+                    <div class="knife_about">
+                        <p class="knife-price">12 850 р.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js">
+</script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
